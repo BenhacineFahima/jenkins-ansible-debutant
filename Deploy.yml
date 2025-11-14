@@ -1,0 +1,10 @@
+---
+- name: Déployer mon application web
+  hosts: webservers
+  become: yes
+
+  tasks:
+    - name: Copier le fichier index.html
+      copy:
+        src: ./index.html
+        dest: /var/www/html/index.html
